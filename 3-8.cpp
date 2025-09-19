@@ -1,8 +1,10 @@
 #include<iostream>
+#include<ctime>
 #include<cstdlib>
 using namespace std;
 int main(){
     int num1,num2,op,result1,result2;
+    srand(time(NULL));
     num1=rand()*10/(RAND_MAX+1);
     num2=rand()*10/(RAND_MAX+1);
     op=rand()*4/(RAND_MAX+1);
@@ -13,7 +15,7 @@ int main(){
         else cout<<"Wrong\n";break;
         case 1:cout<<num1<<"-"<<num2<<"=?";
         cin>>result1;
-        if(num1+num2==result1)cout<<"Right";
+        if(num1-num2==result1)cout<<"Right";
         else cout<<"Wrong\n";break;
         case 2:cout<<num1<<"*"<<num2<<"=?";
         cin>>result1;
